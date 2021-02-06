@@ -11,8 +11,12 @@ for (let i = 0; i < btns.length; i++) {
 }
 
 btnEqual.addEventListener('click', function() {
-    let values = eval(screen.value);
-    screen.value = values;
+    if (screen.value === '') {
+        alert('Input a valid expression');
+    } else {
+        let values = eval(screen.value);
+        screen.value = values;
+    }
 })
 
 btnClear.addEventListener('click', function() {
